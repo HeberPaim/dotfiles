@@ -11,7 +11,7 @@ cd ~
 # change name of the .bashrc to .bashrc.bkp to not lose any settings
 mv .bashrc .bashrc.bkp
 
-# creates a link of name .bashrc on the ~/ directory which refers to the file .bashrc on ~/.dotfiles
+# creates a link of name .bashrc on the ~/ directory, which refers to the file .bashrc on ~/.dotfiles
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
 
 ```
