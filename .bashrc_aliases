@@ -1,0 +1,17 @@
+#list all files and directories including hidden ones 
+alias ll='ls -la --color=auto'
+
+
+# make grep output colorful 
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+#enable color support of ls and also add handy aliases
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+
+
+# curl with -K option, reads from a file
+alias curlk='curl -K '
