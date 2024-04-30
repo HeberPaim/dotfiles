@@ -16,5 +16,8 @@ ln -s ~/.dotfiles/.bashrc ~/.bashrc
 
 ```
 
+ln -s ~/workspace/.dotfiles/vscode/user_settings.json ~/.config/Code/User/settings.json
+
+
 #### What's next
 As for the future, I plan to do a script that sets all files where they should be and install any dependencies to my projects.
