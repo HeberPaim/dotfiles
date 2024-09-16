@@ -112,18 +112,18 @@ set $ws4 " Music"
 set $ws5 "5"
 
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
@@ -167,11 +167,14 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status -c /home/$USER/.config/i3status/i3status.conf 
+    strip_workspace_numbers yes
+    status_command i3status -c /home/$USER/.config/i3status/i3status.conf 
 }
 
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+Ctrl+r exec rofi -show run
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/launchers/type-5/launcher.sh
+bindsym $mod+z exec --no-startup-id powermenu_t5
 
 #?>: printscreen
 bindsym --release $mod+Shift+s exec flameshot gui
@@ -180,7 +183,7 @@ bindsym $mod+Shift+h exec shutdown -h now
 #lockscreen
 bindsym $mod+Shift+x exec /home/$USER/.config/scripts/lock
 
-#ultrawide 2k 
+#ultrawide quad hd
 exec_always xrandr --newmode "3440x1440_50.00"  196.25  3440 3600 3952 4464  1440 1443 1453 1468 -hsync +vsync
 exec_always xrandr --addmode HDMI-1 "3440x1440_50.00"
 exec_always xrandr --auto --output HDMI-1 --mode 3440x1440_50.00 --right-of eDP-1
@@ -193,9 +196,14 @@ exec_always xrandr --auto --output HDMI-1 --mode 3440x1440_50.00 --right-of eDP-
 #monitor full hd
 #exec_always xrandr --auto --output HDMI-1 --mode 1920x1080 --right-of eDP-1
 
+#monitor h
+#exec_always xrandr --newmode "1368x768_120.00"  184.50  1368 1472 1616 1864  768 771 781 826 -hsync +vsync 
+#exec_always xrandr --addmode HDMI-1 "1368x768_120.00" 
+#exec_always xrandr --auto --output HDMI-1 --mode 1368x768_120.00 --right-of eDP-1
+
+
 
 exec_always feh --bg-fill ~/Downloads/Images/Wallpaper/112365-3440x1440-ultra-wide-wallpaper-image-desktop-dual-screen.jpg
 
 #keyboard change
 exec_always setxkbmap -model pc105 -layout br,us -option grp:win_space_toggle
-
