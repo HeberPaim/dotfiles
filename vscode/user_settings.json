@@ -57,7 +57,7 @@
         "editorBracketPairGuide.activeBackground5": "#DAD8D89E",
         "editorBracketPairGuide.activeBackground6": "#18EECE9E"
     },
-    "terminal.integrated.fontFamily": "'Cascadia Code'",
+    "terminal.integrated.fontFamily": "'MesloLGS NF'",
     "terminal.integrated.fontSize": 13,
     "numberedBookmarks.navigateThroughAllFiles": "replace",
     "files.autoSave": "afterDelay",
