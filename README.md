@@ -1,23 +1,15 @@
 ## DotFiles
 This is a repository for backup of my dotfiles. Im using this to centralize and not reconfigure all my tools.
 
-To use the files, clone this repository and go to the directory where the configuration file should be. 
+To use this files, clone this repository and run firstly 
+```sh
+start.sh
+```
+Start.sh will install zsh and oh-my-zsh
 
-As a example, to use .bashrc file on linux, the following commands should work
-```bash
-# change the directory to $HOME
-cd ~
-
-# change name of the .bashrc to .bashrc.bkp to not lose any settings
-mv .bashrc .bashrc.bkp
-
-# creates a link of name .bashrc on the ~/ directory, which refers to the file .bashrc on ~/.dotfiles
-ln -s ~/.dotfiles/.bashrc ~/.bashrc
-
+Then, proceed running installation.zsh
+```zsh
+installation.zsh
 ```
 
-ln -s ~/workspace/.dotfiles/vscode/user_settings.json ~/.config/Code/User/settings.json
-
-
-#### What's next
-As for the future, I plan to do a script that sets all files where they should be and install any dependencies to my projects.
+installation.zsh will install zsh plugins powerlevel10k theme.
