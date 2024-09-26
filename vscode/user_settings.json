@@ -80,7 +80,7 @@
         "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
     },
     "diffEditor.maxComputationTime": 0,
-    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.maxFileSize": 0,
     "git.replaceTagsWhenPull": true,
     "git.autofetch": true,
