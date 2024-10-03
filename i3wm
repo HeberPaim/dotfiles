@@ -187,9 +187,10 @@ exec_always xrandr --output HDMI-1-1 --mode 3440x1440 --rate 50 --primary \
             --output eDP-1-1 --mode 1920x1080 --right-of HDMI-1-1
 
 #monitor full hd
-#exec_always xrandr --output HDMI-1-1 --mode 3440x1440 --rate 50 --primary \
-#            --output eDP-1-1 --mode 1920x1080 --right-of HDMI-1-1
+#exec_always xrandr --output HDMI-1-1 --mode 1920x1080 --right-of eDP-1-1 --primary \
+#            --output eDP-1-1 --mode 1920x1080
 
+exec_always xrandr --auto
 
 exec_always feh --bg-fill ~/Downloads/Images/Wallpaper/112365-3440x1440-ultra-wide-wallpaper-image-desktop-dual-screen.jpg
 

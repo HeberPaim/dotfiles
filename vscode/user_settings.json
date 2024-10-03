@@ -134,5 +134,6 @@
     ],
     "zenMode.centerLayout": false, 
     "zenMode.hideLineNumbers": false,
-    "zenMode.showTabs": "single"
+    "zenMode.showTabs": "single",
+    "gitlens.mode.active": "zen"
 }
