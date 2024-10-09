@@ -1,5 +1,6 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:HeberPaim/nvim.git
+	branch = master
 [submodule "/nvim"]
 	branch = master
