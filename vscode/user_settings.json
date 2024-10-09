@@ -135,5 +135,8 @@
     "zenMode.centerLayout": false, 
     "zenMode.hideLineNumbers": false,
     "zenMode.showTabs": "single",
-    "gitlens.mode.active": "zen"
+    "gitlens.mode.active": "zen",
+    "emeraldwalk.runonsave": {
+        
+    }
 }
