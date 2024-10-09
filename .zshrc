@@ -133,3 +133,16 @@ export ANDROID_HOME=/home/dev/Android/Sdk
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval "$(ssh-agent -s)"
+
+# fnm
+FNM_PATH="/home/hereberz/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/hereberz/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+export PATH="$PATH:/opt/nvim-linux64/bin"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
