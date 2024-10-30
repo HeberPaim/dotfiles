@@ -2,5 +2,7 @@
 	path = nvim
 	url = git@github.com:HeberPaim/nvim.git
 	branch = master
-[submodule "/nvim"]
+[submodule "kitty-themes"]
+	path = kitty/kitty-themes
+	url = git@github.com:dexpota/kitty-themes.git
 	branch = master
