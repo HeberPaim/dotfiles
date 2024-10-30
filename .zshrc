@@ -87,7 +87,6 @@ plugins=(
     git-commit
     zsh-autosuggestions
     zsh-syntax-highlighting
-    adb
     aliases
   
   )
@@ -135,6 +134,11 @@ export ANDROID_HOME=/home/dev/Android/Sdk
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(ssh-agent -s)"
+
+
+#powerlevel 10k
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 # fnm
 FNM_PATH="/home/hereberz/.local/share/fnm"
