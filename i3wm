@@ -167,10 +167,11 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 #   status_command ~/workspace/dotfiles/lemonbar-status.sh
-    strip_workspace_numbers yes
-    status_command i3status -c /home/$USER/.config/i3status/i3status.conf 
+#    strip_workspace_numbers yes
+#    status_command i3status -c /home/$USER/.config/i3status/i3status.conf 
+	status_command i3blocks
 }
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show drun -show-icons
 bindsym $mod+Ctrl+r exec rofi -show run
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/launchers/type-5/launcher.sh
 bindsym $mod+z exec --no-startup-id powermenu_t5
@@ -183,11 +184,14 @@ bindsym $mod+Shift+h exec shutdown -h now
 bindsym $mod+Shift+x exec /home/$USER/.config/scripts/lock
 
 #ultrawide quad hd
-exec_always xrandr --output HDMI-1-1 --mode 3440x1440 --rate 50 --primary \
-                   --output eDP-1-1 --mode 1920x1080 --right-of HDMI-1-1
+#exec_always xrandr --newmode 3440x1440 270.00  3440 3648 4008 4576  1440 1443 1453 1476 -hsync +vsync 
+#exec_always xrandr --addmode HDMI-1 3440x1440
+#exec_always xrandr --output HDMI-1 --mode 3440x1440 --primary --left-of eDP-1 \
+#                   --output eDP-1 --mode 1920x1080
+
 
 #monitor hd
-#exec_always xrandr --output HDMI-1-1 --mode 1280x720
+exec_always xrandr --output HDMI-1 --mode 1920x1080 --right-of eDP-1 --primary
 
 #monitor full hd
 #exec_always xrandr --output HDMI-1-1 --mode 1920x1080 --right-of eDP-1-1 --primary \
@@ -195,7 +199,16 @@ exec_always xrandr --output HDMI-1-1 --mode 3440x1440 --rate 50 --primary \
 
 #exec_always xrandr --auto
 
-exec_always feh --bg-fill ~/Downloads/Images/Wallpaper/112365-3440x1440-ultra-wide-wallpaper-image-desktop-dual-screen.jpg
+#exec_always feh --bg-fill ~/Downloads/Images/Wallpaper/112365-3440x1440-ultra-wide-wallpaper-image-desktop-dual-screen.jpg
 
 #keyboard change
 exec_always setxkbmap -model pc105 -layout br,us -option grp:win_space_toggle
+
+
+#spotify controls
+
+bindsym $mod+Shift+p exec playerctl play-pause
+bindsym $mod+Shift+n exec playerctl next
+bindsym $mod+Shift+b exec playerctl previous
+exec_always --no-startup-id xrdb -merge ~/.Xresources
+exec_always xsetroot -cursor_name left_ptr
